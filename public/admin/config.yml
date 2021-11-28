@@ -5,8 +5,8 @@ media_folder: public/img
 public_folder: img
 collections:
   - name: "pages"
-    label: "Pages"
     create:true
+    label: "Pages"
     files:
     - label: "Home"
       name: "home"
