@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Component } from "react";
 import { attributes, react as HomeContent } from "../content/home.md";
-import Image from "next/image";
 export default class Home extends Component {
   render() {
     let { title, date } = attributes;

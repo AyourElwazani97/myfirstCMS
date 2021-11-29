@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   const curs = useRef(null);
