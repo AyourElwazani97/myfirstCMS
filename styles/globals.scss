@@ -1,0 +1,27 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "K2D", sans-serif;
+}
+a {
+  color: none;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* custom cursor */
+.curs {
+  color: red;
+  padding: 10px;
+  width: 10px;
+  height: 20px;
+  position: fixed;
+  border-radius: 100%;
+  background: #000;
+  border: 2px double red;
+  mix-blend-mode: difference;
+  transition: 100ms ease;
+}

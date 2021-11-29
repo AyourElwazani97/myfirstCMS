@@ -4,8 +4,10 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "posts"
+    label: "posts"
+    create : true
+    delete:true
     files:
     - label: "Home"
       name: "home"
