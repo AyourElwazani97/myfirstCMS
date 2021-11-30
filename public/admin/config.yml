@@ -6,7 +6,7 @@ public_folder: img
 collections:
   - label: "posts"
     name: "code_posts"
-    folder: "posts/hello.md"
+    folder: "posts"
     create: true
     fields:
       - {
@@ -14,6 +14,12 @@ collections:
           name: "language",
           widget: "select",
           options: ["en", "es"],
+        }
+      - {
+          label: "date",
+          name: "date_time",
+          widget: "datetime",
+          date_format: "DD.MM.YYYY",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Content", name: "body", widget: "text" }
