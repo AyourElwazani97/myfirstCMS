@@ -10,17 +10,12 @@ collections:
     create: true
     fields:
       - {
-          label: "Language",
-          name: "language",
-          widget: "select",
-          options: ["en", "es"],
-        }
-      - {
           label: "date",
           name: "date_time",
           widget: "datetime",
           date_format: "DD.MM.YYYY",
         }
+      - { label: "Author", name: "author", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "ImageHandler", name: "thumbnail", widget: "image" }
