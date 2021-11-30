@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Component } from "react";
-import { attributes, react as HomeContent } from "../content/home.md";
+import { attributes, react as HomeContent } from "../posts/hello.md";
 import Image from "next/image";
 const Home = () => {
   const URL = "https://ayour.netlify.app/";

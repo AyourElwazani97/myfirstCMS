@@ -6,7 +6,7 @@ public_folder: img
 collections:
   - label: "posts"
     name: "code_posts"
-    folder: "posts"
+    folder: "posts/hello.md"
     create: true
     fields:
       - {
