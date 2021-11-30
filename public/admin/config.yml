@@ -22,5 +22,5 @@ collections:
           date_format: "DD.MM.YYYY",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "text" }
+      - { label: "Content", name: "body", widget: "markdown" }
       - { label: "ImageHandler", name: "thumbnail", widget: "image" }
