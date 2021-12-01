@@ -1,0 +1,31 @@
+.hero {
+  width: $per;
+  height: $per;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  .hero_child {
+    width: $per-helf;
+    display: $f;
+    justify-content: $sv;
+    align-items: $c;
+    .each_post {
+      width: 360px;
+      max-width: 360px;
+      text-align: left;
+      h2 {
+        text-align: center;
+        margin: 0%;
+      }
+      img {
+        object-fit: $cv;
+      }
+      button {
+        width: 100%;
+        font-weight: bold;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}

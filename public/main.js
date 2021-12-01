@@ -21,8 +21,8 @@ const months = {
     "12": "December"
 }
 
-const formatDate = (date) => {
-    const datetimeArray = date.split("T")
+const formatDate = (date_time) => {
+    const datetimeArray = date_time.split("T")
     const dateArray = datetimeArray[0].split("-")
     const timeArray = datetimeArray[1].split(":")
     const month = dateArray[1]
@@ -71,7 +71,7 @@ const getPosts = () => {
                 const metadataIndices = lines.reduce(getMetadataIndices, [])
                 const metadata = parseMetadata({lines, metadataIndices})
                 const content = parseContent({lines, metadataIndices})
-                const parsedDate = metadata.date ? formatDate(metadata.date) : new Date()
+                const parsedDate = metadata.date_time ? formatDate(metadata.date_time) : new Date()
                 const publishedDate = `${parsedDate["monthName"]} ${parsedDate["day"]}, ${parsedDate["year"]}`
                 const datestring = `${parsedDate["year"]}-${parsedDate["month"]}-${parsedDate["day"]}T${parsedDate["time"]}:00`
                 const date = new Date(datestring)

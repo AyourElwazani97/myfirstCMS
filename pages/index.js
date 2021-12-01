@@ -1,26 +1,52 @@
 import Head from "next/head";
-import { attributes, react as HomeContent } from "../posts/zedzedze.md";
+import Image from "next/image";
+import GAGA from "../posts.json";
+import styles from "../styles/Home.module.scss";
 const Home = () => {
   const URL = "https://ayour.netlify.app/";
-  let { title, date_time, thumbnail } = attributes;
-  console.log(attributes);
   return (
     <>
+      <style jsx global>
+        {`
+          body {
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+            padding: 0%;
+          }
+        `}
+      </style>
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
-      <article>
-        <h1>{title}</h1>
-        <HomeContent />
-        <div>
-          <button>d</button>
+      <div className={styles.hero}>
+        <div className={styles.hero_child}>
+          {GAGA.map((art, i) => {
+            return (
+              <div key={i} className={styles.each_post}>
+                <div>
+                  <div>
+                    <Image
+                      loading="lazy"
+                      src={`/${art.thumbnail}`}
+                      width="360"
+                      height="300"
+                      alt=""
+                    />
+                  </div>
+                  <h2>{art.title}</h2>
+                  <div>
+                    <p>{art.content.slice(0, 200) + "..."}</p>
+                  </div>
+                  <div>
+                    <button>read more...</button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <h1>{date_time}</h1>
-        <img src={`/${thumbnail}`} width="300" height="300" alt="" />
-        <div>
-          gaga is love
-        </div>
-      </article>
+      </div>
     </>
   );
 };
