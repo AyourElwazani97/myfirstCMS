@@ -13,6 +13,8 @@ const Home = () => {
             height: 100%;
             margin: 0%;
             padding: 0%;
+            background: #000;
+            overflow-x: hidden;
           }
         `}
       </style>
@@ -24,24 +26,24 @@ const Home = () => {
           {GAGA.map((art, i) => {
             return (
               <div key={i} className={styles.each_post}>
-                <div>
                   <div>
                     <Image
                       loading="lazy"
                       src={`/${art.thumbnail}`}
                       width="360"
-                      height="300"
+                      height="200"
                       alt=""
                     />
                   </div>
-                  <h2>{art.title}</h2>
+                  <div className={styles.post_Title}>
+                    <p>{art.title}</p>
+                  </div>
                   <div>
                     <p>{art.content.slice(0, 200) + "..."}</p>
                   </div>
                   <div>
                     <button>read more...</button>
                   </div>
-                </div>
               </div>
             );
           })}
