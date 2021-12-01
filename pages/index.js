@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { attributes, react as HomeContent } from "../posts/zedzedze.md";
-import Image from "next/image";
 const Home = () => {
   const URL = "https://ayour.netlify.app/";
   let { title, date_time, thumbnail } = attributes;
@@ -17,7 +16,10 @@ const Home = () => {
           <button>d</button>
         </div>
         <h1>{date_time}</h1>
-        <Image src={`/${thumbnail}`} width="300" height="300" alt="" />
+        <img src={`/${thumbnail}`} width="300" height="300" alt="" />
+        <div>
+          gaga is love
+        </div>
       </article>
     </>
   );
