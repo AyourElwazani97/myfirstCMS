@@ -8,6 +8,7 @@ collections:
     name: "code_posts"
     folder: "posts"
     create: true
+    delete: true
     fields:
       - {
           label: "date",
@@ -16,6 +17,6 @@ collections:
           date_format: "DD.MM.YYYY",
         }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Title", name: "title", widget: "text" }
+      - { label: "Title", name: "title", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "ImageHandler", name: "thumbnail", widget: "image" }
