@@ -2,6 +2,10 @@
 date_time: 2021-12-01T16:15:28.535Z
 author: "ayoub wazane "
 title: gaga is love
-thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/210120-D-WD757-1720_%2850861332387%29_%28cropped%29.jpg/1200px-210120-D-WD757-1720_%2850861332387%29_%28cropped%29.jpg
+thumbnail: img/lady-gaga.jpg
 ---
-yes exacrtly gaga is love
+
+
+> ***Stefani Joanne Angelina Germanotta, known professionally as Lady Gaga, is an American singer, songwriter, and actress. She is known for her image reinventions and musical versatility. Gaga began performing as a teenager, singing at open mic nights, and acting in school plays. [Wikipedia](https://en.wikipedia.org/wiki/Lady_Gaga)***
+>
+>
