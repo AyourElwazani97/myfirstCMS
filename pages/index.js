@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import GAGA from "../posts.json";
 import styles from "../styles/Home.module.scss";
-import link from "next/link";
 const Home = () => {
   return (
     <>
