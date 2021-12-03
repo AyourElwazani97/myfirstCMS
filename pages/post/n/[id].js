@@ -1,17 +1,24 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import EachPostById from "../../../posts.json";
 function PostById() {
- /*  const router = useRouter();
-  const getIndex = EachPostById.findIndex((el) => {
-      console.log();
-  })
-  console.log(getIndex) */
+  const router = useRouter();
+  const getIndex = EachPostById.findIndex(async (el) => {
+    const checkIndex = el.id == router.query.id;
+    return checkIndex;
+  });
+  const getArraybyItsIndex = [EachPostById[getIndex]];
   return (
     <div>
-     <h1>
-         Hey
-     </h1>
+      <div>
+        {getArraybyItsIndex.map((post, i) => {
+          return (
+            <div key={i}>
+              <h1>{post.date}</h1>
+              <p>{post.content}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import GAGA from "../posts.json";
 import styles from "../styles/Home.module.scss";
+import Link from "next/link";
+import React from "react";
 const Home = () => {
   return (
     <>
@@ -24,23 +26,29 @@ const Home = () => {
         <div className={styles.hero_child}>
           {GAGA.map((art, i) => {
             return (
-              <div key={i} className={styles.each_post}>
-                <div>
-                  <Image
-                    loading="lazy"
-                    src={`/${art.thumbnail}`}
-                    width="360"
-                    height="200"
-                    alt=""
-                  />
-                </div>
-                <div className={styles.post_Title}>
-                  <p>{art.title}</p>
-                </div>
-                <div>
-                  <p>{art.content.slice(0, 200) + "..."}</p>
-                </div>
-              </div>
+              <React.Fragment key={i}>
+                <Link href={`/post/n/${art.id}`}>
+                  <a>
+                    <div className={styles.each_post}>
+                      <div>
+                        <Image
+                          loading="lazy"
+                          src={`/${art.thumbnail}`}
+                          width="360"
+                          height="200"
+                          alt=""
+                        />
+                      </div>
+                      <div className={styles.post_Title}>
+                        <p>{art.title}</p>
+                      </div>
+                      <div>
+                        <p>{art.content.slice(0, 200) + "..."}</p>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              </React.Fragment>
             );
           })}
         </div>
