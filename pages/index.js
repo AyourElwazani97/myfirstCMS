@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import GAGA from "../posts.json";
 import styles from "../styles/Home.module.scss";
+import link from "next/link";
 const Home = () => {
-  const URL = "https://ayour.netlify.app/";
   return (
     <>
       <style jsx global>
@@ -26,24 +26,21 @@ const Home = () => {
           {GAGA.map((art, i) => {
             return (
               <div key={i} className={styles.each_post}>
-                  <div>
-                    <Image
-                      loading="lazy"
-                      src={`/${art.thumbnail}`}
-                      width="360"
-                      height="200"
-                      alt=""
-                    />
-                  </div>
-                  <div className={styles.post_Title}>
-                    <p>{art.title}</p>
-                  </div>
-                  <div>
-                    <p>{art.content.slice(0, 200) + "..."}</p>
-                  </div>
-                  <div>
-                    <button>read more...</button>
-                  </div>
+                <div>
+                  <Image
+                    loading="lazy"
+                    src={`/${art.thumbnail}`}
+                    width="360"
+                    height="200"
+                    alt=""
+                  />
+                </div>
+                <div className={styles.post_Title}>
+                  <p>{art.title}</p>
+                </div>
+                <div>
+                  <p>{art.content.slice(0, 200) + "..."}</p>
+                </div>
               </div>
             );
           })}
