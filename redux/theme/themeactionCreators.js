@@ -5,7 +5,6 @@ export const lightTheme = () => {
     type: LIGHT_MODE,
     payload: {
       lightMode: false,
-      storeTheme: localStorage.removeItem("Theme"),
     },
   };
 };
@@ -14,7 +13,6 @@ export const darkTheme = () => {
     type: DARK_MODE,
     payload: {
       darkMode: true,
-      storeTheme: localStorage.setItem("Theme", "true"),
     },
   };
 };

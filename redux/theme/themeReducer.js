@@ -1,7 +1,7 @@
 import { DARK_MODE, LIGHT_MODE } from "../types";
 const initialState = {
   isThemeActive: false,
-  isStored: false,
+  isStored: null,
 };
 const ThemeReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -9,13 +9,11 @@ const ThemeReducer = (state = initialState, action) => {
       return {
         ...state,
         isThemeActive: action.payload.lightMode,
-        isStored: action.payload.storeTheme,
       };
     case DARK_MODE:
       return {
         ...state,
         isThemeActive: action.payload.darkMode,
-        isStored: action.payload.storeTheme,
       };
     default:
       return state;
