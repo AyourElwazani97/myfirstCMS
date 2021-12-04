@@ -4,22 +4,24 @@
   display: $f;
   justify-content: $c;
   align-items: $c;
-  color: #FFF;
+  color: #fff;
   .hero_child {
     width: $per-helf;
     display: $f;
     justify-content: $sv;
     align-items: $c;
     flex-wrap: wrap;
-    position:$r;
+    position: $r;
     .each_post {
       width: 360px !important;
       max-width: 360px !important;
       text-align: left;
       height: $per;
-     .post_Title{
-      display: inline-block;
-     }
+      box-shadow: 0 4px 4px 0 $rgb;
+      border-radius: 20px;
+      p {
+        padding-left: 20px;
+      }
       img {
         object-fit: $cv;
       }

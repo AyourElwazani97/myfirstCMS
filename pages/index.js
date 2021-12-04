@@ -4,6 +4,7 @@ import GAGA from "../posts.json";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import React from "react";
+import NavBar from "../components/navbar";
 const Home = () => {
   return (
     <>
@@ -14,7 +15,6 @@ const Home = () => {
             height: 100%;
             margin: 0%;
             padding: 0%;
-            background: #000;
             overflow-x: hidden;
           }
         `}
@@ -22,6 +22,7 @@ const Home = () => {
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
+      <NavBar />
       <div className={styles.hero}>
         <div className={styles.hero_child}>
           {GAGA.map((art, i) => {
@@ -41,9 +42,6 @@ const Home = () => {
                       </div>
                       <div className={styles.post_Title}>
                         <p>{art.title}</p>
-                      </div>
-                      <div>
-                        <p>{art.content.slice(0, 200) + "..."}</p>
                       </div>
                     </div>
                   </a>

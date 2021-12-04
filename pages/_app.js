@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../styles/globals.scss";
-
+import { Provider } from "react-redux";
+import store from '../store'
 function MyApp({ Component, pageProps }) {
   const curs = useRef(null);
   useEffect(() => {
@@ -12,10 +13,10 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
   return (
-    <>
+    <Provider store={store}>
       <div ref={curs} className="curs"></div>
       <Component {...pageProps} />
-    </>
+    </Provider>
   );
 }
 
